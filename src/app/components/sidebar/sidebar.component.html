@@ -55,8 +55,20 @@
         <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
             <a class="nav-link" [routerLink]="[menuItem.path]">
                 <i class="material-icons">{{menuItem.icon}}</i>
-                <p style="color:white">{{menuItem.title}}</p>
+                <p style="color:white;" >{{menuItem.title}}</p>
             </a>
+            <ul>
+                <div *ngFor="let childItem of childItems">
+                    <div *ngIf="childItem.parentid == menuItem.id">
+                        <li class="{{childItem.class}}">
+                                <a class="nav-link" [routerLink]="[childItem.path]">
+                                    <i class="material-icons">{{childItem.icon}}</i>
+                                    <p style="color:white">{{childItem.title}}</p>
+                                </a>                        
+                        </li>        
+                    </div>
+                </div>
+            </ul>
         </li>
     </ul>
 </div>

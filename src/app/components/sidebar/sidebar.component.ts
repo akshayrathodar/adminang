@@ -6,16 +6,34 @@ declare interface RouteInfo {
     title: string;
     icon: string;
     class: string;
+    id: number;
 }
+
+declare interface Childinfo {
+  path: string;
+  title: string;
+  icon: string;
+  class: string;
+  parentid: number;
+}
+
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
-    { path: '/user-profile', title: 'User Profile',  icon:'person', class: '' },
-    { path: '/table-list', title: 'Table List',  icon:'content_paste', class: '' },
-    { path: '/typography', title: 'Typography',  icon:'library_books', class: '' },
-    { path: '/icons', title: 'Icons',  icon:'bubble_chart', class: '' },
-    { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },
-    { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
-    { path: '/demo', title: 'Demo',  icon:'notifications', class: '' }
+    { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' , id: 1},
+    { path: '/user-profile', title: 'Users',  icon: 'person', class: '' , id: 2},
+    { path: '/table-list', title: 'Series',  icon: 'emoji_events', class: '' , id: 3},
+    { path: '/typography', title: 'Default Contest',  icon: 'list_alt', class: '' , id: 4},
+    { path: '/icons', title: 'Content Type',  icon: 'mediation', class: '' , id: 5},
+    { path: '/maps', title: 'Document Verification',  icon: 'contact_phone', class: 'mapcls' , id: 6},
+    { path: '/notifications', title: 'Transaction History',  icon: 'receipt_long', class: '' , id: 7},
+    { path: '/notifications', title: 'Receipt',  icon: 'receipt', class: '' , id: 8},
+    { path: '/demo', title: 'Promotions',  icon: 'campaign', class: '', id: 9 }
+];
+
+export const CHILDROUTE: Childinfo[] = [
+  { path: '/demo1', title: 'Upcomming Matches',  icon: 'arrow_forward', class: '', parentid: 3 },
+  { path: '/demo1', title: 'Live Matches',  icon: 'arrow_forward', class: '', parentid: 3 },
+  { path: '/demo1', title: 'Completed Matches',  icon: 'arrow_forward', class: '', parentid: 3 },
+  
 ];
 
 @Component({
@@ -25,12 +43,20 @@ export const ROUTES: RouteInfo[] = [
 })
 export class SidebarComponent implements OnInit {
   menuItems: any[];
+  childItems: any[];
 
   constructor() { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
+   this.childItems = CHILDROUTE.filter(childItem => childItem);
+   $('.mapcls').on('click',(e) => {
+    
+   });
   }
+
+  
+
   isMobileMenu() {
       if ($(window).width() > 991) {
           return false;

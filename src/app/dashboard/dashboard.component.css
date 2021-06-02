@@ -1,0 +1,33 @@
+.cardz {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    font-family: Ubuntu;
+    border-radius: 25px;
+    color: white;
+    line-height: 25px;
+    box-shadow: 5px 5px 10px #ccc;
+    float: left;
+    margin-right: 1em;
+  }
+  
+  .cardz.purple {
+    background: linear-gradient(150deg, #f731db, #4600f1 100%);
+  }
+  
+  .cardz.green {
+    background: linear-gradient(150deg, #39ef74, #4600f1 100%);
+  }
+  .cardz button {
+    text-transform: uppercase;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    color: #4600f1;
+    border-radius: 50px;
+    padding: 0.2em;
+    background: white;
+    border: none;
+    font-weight: bold;
+    margin-top: 4em;
+  }
