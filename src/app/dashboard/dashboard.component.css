@@ -1,33 +1,90 @@
 .cardz {
     width: 100%;
+    height: 120px;
+    margin: auto;
     box-sizing: border-box;
-    padding: 1em;
+    padding: 0.8em;
     font-family: Ubuntu;
     border-radius: 25px;
     color: white;
-    line-height: 25px;
     box-shadow: 5px 5px 10px #ccc;
     float: left;
-    margin-right: 1em;
+    margin-right: 0.4em;
+    font-weight: bold;
   }
-  
   .cardz.purple {
-    background: linear-gradient(150deg, #f731db, #4600f1 100%);
+    background: linear-gradient(150deg, #9C56FE, #e16cdb 100%);
   }
   
   .cardz.green {
-    background: linear-gradient(150deg, #39ef74, #4600f1 100%);
+    background: linear-gradient(150deg, #24bfb6, #41e595 100%);
   }
+
+  .cardz.blue {
+    background: linear-gradient(150deg, #9c56fe, #58c8f2 100%);
+  }
+
+  .cardz.orange {
+    background: linear-gradient(150deg, #ffc107, #f96cd6 100%);
+  }
+
+  
   .cardz button {
     text-transform: uppercase;
-    width: 150px;
+    width: 100px;
     display: block;
-    margin: 0 auto;
     color: #4600f1;
     border-radius: 50px;
-    padding: 0.2em;
     background: white;
     border: none;
+    font-size: 12px;
     font-weight: bold;
-    margin-top: 4em;
+    margin-top: 1em;
+  }
+
+
+  .badge-circle-light-success {
+    background-color: rgba(57,218,138,.17);
+    color: #39DA8A;
+  }
+
+  .badge-circle.badge-circle-lg {
+    height: 48px;
+    width: 48px;
+  }
+  .badge-circle-light-danger {
+    background-color: rgba(255,91,92,.17);
+    color: #FF5B5C;
+  }
+
+  .badge-circle {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    padding: 0;
+  }
+  .dashcard-middle{
+    font-size: 18px;
+  }
+  .dashcard-h3{
+    font-weight: 520;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .card{
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
   }
