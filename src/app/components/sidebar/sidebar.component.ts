@@ -30,9 +30,9 @@ export const ROUTES: RouteInfo[] = [
 ];
 
 export const CHILDROUTE: Childinfo[] = [
-  { path: '/demo1', title: 'Upcomming Matches',  icon: 'arrow_forward', class: '', parentid: 3 },
-  { path: '/demo1', title: 'Live Matches',  icon: 'arrow_forward', class: '', parentid: 3 },
-  { path: '/demo1', title: 'Completed Matches',  icon: 'arrow_forward', class: '', parentid: 3 },
+  { path: '/demo', title: 'Upcomming Matches',  icon: 'arrow_forward', class: '', parentid: 3 },
+  { path: '/demo', title: 'Live Matches',  icon: 'arrow_forward', class: '', parentid: 3 },
+  { path: '/demo', title: 'Completed Matches',  icon: 'arrow_forward', class: '', parentid: 3 },
   
 ];
 
